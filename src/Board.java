@@ -112,6 +112,7 @@ public class Board extends JPanel {
 		g2.drawPolygon(x, y, 6);
 	}
 	
+	@Override
 	public void paint(Graphics g) {
 		int s = maxs-mins+1, o = maxo-mino+1;
 		g.setColor(hatterSzin);
@@ -134,6 +135,6 @@ public class Board extends JPanel {
 				if((tip=tab[ss+mins][oo+mino]) > -1)
 					elemRajz(g, R, tip, forg[ss+mins][oo+mino], ox+3.0/2*R*oo, oy+gy3p2*ss);
 		g.setColor(Color.black);
-		g.drawString(level+". szint:  "+solCnt+". megoldás", 20, 20);
+		g.drawString("Level "+level+", solution  "+solCnt, 20, 20);
 	}
 }
